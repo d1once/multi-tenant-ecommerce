@@ -9,7 +9,7 @@ import { MenuIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-import { NavbarSideBar } from "./navbar-sidebat";
+import { NavbarSideBar } from "./navbar-sidebar";
 import { useTRPC } from "@/trpc/client";
 import { useQuery } from "@tanstack/react-query";
 
