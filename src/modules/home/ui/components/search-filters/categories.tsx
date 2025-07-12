@@ -54,12 +54,14 @@ export const Categories = ({ data }: Props) => {
       }
 
       setVisibleCount(visible);
-
-      const resizeObserver = new ResizeObserver(calculateVisible);
-      resizeObserver.observe(containerRef.current!);
-
-      return () => resizeObserver.disconnect();
     };
+
+    calculateVisible();
+
+    const resizeObserver = new ResizeObserver(calculateVisible);
+    resizeObserver.observe(containerRef.current!);
+
+    return () => resizeObserver.disconnect();
   }, [data.length]);
 
   return (
